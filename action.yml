@@ -21,19 +21,19 @@ runs:
   using: "composite"
   steps: 
       - name: Set up Poetry
-        uses: snok/install-poetry@v1.0.0
+        uses: snok/install-poetry@fdde2e959030c136a4108a030377df3f06cacc3a # v1.2.0
         with:
           version: ${{ inputs.poetry-version }}
           virtualenvs-create: true
           virtualenvs-in-project: true
     
       - name: Set up firefox
-        uses: browser-actions/setup-firefox@latest
+        uses: browser-actions/setup-firefox@deb7346521ceb1f54708c82d6bebf9f2bf70c8c6 # latest
         with:
           firefox-version: ${{ inputs.firefox-version }}
 
       - name: Set up geckodriver
-        uses: browser-actions/setup-geckodriver@latest
+        uses: browser-actions/setup-geckodriver@1605d95d4e5e7f5e3706e1e6f9c839d3834159db # latest
         with:
           geckodriver-version: ${{ inputs.geckodriver-version }}
 
